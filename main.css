@@ -30,6 +30,7 @@
     --white: white;
     --dimgray: #505050;
     --lavender: #e9e7eb;
+    --cornflowerblue: #779de4;
 }
 
 html {
@@ -87,7 +88,7 @@ body {
 .quantity__title {
     font-weight: bold;
     font-size: 2.5rem;
-
+    line-height: 2;
 }
 
 .quantity_buttons {
@@ -145,5 +146,75 @@ body {
     box-shadow: 0px 0px 69px -2px rgba(133, 133, 133, 0.57);
     -webkit-box-shadow: 0px 0px 69px -2px rgba(133, 133, 133, 0.57);
     -moz-box-shadow: 0px 0px 69px -2px rgba(133, 133, 133, 0.57);
+}
 
+/* ======== Animations  ========  */
+
+.shrink {
+    animation: shrink .5s linear backwards;
+    -webkit-animation: shrink .5s linear backwards;
+}
+
+@keyframes shrink {
+
+    0% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+
+    50% {
+        transform: scale(.97);
+        -webkit-transform: scale(.97);
+        -moz-transform: scale(.97);
+        -ms-transform: scale(.97);
+        -o-transform: scale(.97);
+    }
+
+    100% {
+        transform: scale(1);
+        -webkit-transform: scale(1);
+        -moz-transform: scale(1);
+        -ms-transform: scale(1);
+        -o-transform: scale(1);
+    }
+
+}
+
+.set-blue {
+    background-color: var(--cornflowerblue);
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.set-mauve {
+    background-color: var(--mauve);
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.set-red {
+    background-color: var(--apricot);
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
+}
+
+.set-green {
+    background-color: var(--riptide);
+    transition: .5s;
+    -webkit-transition: .5s;
+    -moz-transition: .5s;
+    -ms-transition: .5s;
+    -o-transition: .5s;
 }
