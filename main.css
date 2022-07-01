@@ -1,4 +1,18 @@
-/* style is here */
+/* 
+ ======= Main Style CSS   ========
+ 
+*/
 
-* {
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {}
+
+html {
+    scroll-behavior: smooth;
 }
