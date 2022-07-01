@@ -56,10 +56,15 @@ body {
     width: 600px;
     height: 200px;
     padding: 2rem;
+
+
+}
+
+.table-reservation__content {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* align-items: center; */
+    height: 100%;
 }
 
 .table-reservation__subtitle {
@@ -76,7 +81,7 @@ body {
 .quantity__title {
     font-weight: bold;
     font-size: 3rem;
-    line-height: 2;
+    /* line-height: 2; */
 }
 
 .quantity_buttons {
