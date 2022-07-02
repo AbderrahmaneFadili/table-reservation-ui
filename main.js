@@ -7,19 +7,17 @@ const body = document.querySelector("body");
 
 let personsNumber = parseInt(quantityNumber.textContent);
 
-btnIncrement.addEventListener("click", (event) => {
-  if (personsNumber < 4) {
-    personsNumber++;
-    quantityNumber.textContent = personsNumber;
-  }
-});
-
 btnIncrement.addEventListener("mousedown", (event) => {
   tableReservation.classList.remove("shrink");
-  removeBackgroundColor();
+  if (personsNumber < 4) {
+    removeBackgroundColor();
+  }
+
   window.requestAnimationFrame(() => {
     tableReservation.classList.add("shrink");
     if (personsNumber < 4) {
+      personsNumber++;
+      quantityNumber.textContent = personsNumber;
       setBackgroundColor(personsNumber);
     }
   });
@@ -30,17 +28,13 @@ btnDecrement.addEventListener("mousedown", (event) => {
   removeBackgroundColor();
   window.requestAnimationFrame(() => {
     tableReservation.classList.add("shrink");
-    if (personsNumber > 0) {
+
+    if (personsNumber > 1) {
+      personsNumber--;
+      quantityNumber.textContent = personsNumber;
       setBackgroundColor(personsNumber);
     }
   });
-});
-
-btnDecrement.addEventListener("click", (event) => {
-  if (personsNumber > 0) {
-    personsNumber--;
-    quantityNumber.textContent = personsNumber;
-  }
 });
 
 /* set background color */
@@ -59,6 +53,7 @@ function setBackgroundColor(number) {
       body.className = "set-mauve";
       break;
     default:
+      body.className = "set-blue";
       break;
   }
 }
